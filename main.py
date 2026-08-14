@@ -1,4 +1,5 @@
 import pygame #Импорт необходимой билиотеки pygame
+import sys #Импорт необходимой билиотеки
 
 
 pygame.init() #Запуск библиотеки pygame
@@ -13,7 +14,14 @@ def Main():
     pygame.display.set_caption("Kliker0") #Присвоение окну названия "Kliker0"
 
     while stop != True: #Цикл-затычка чтобы не сворачивалось окно
-        a = 1
+        for event in pygame.event.get(): # Запись каждого нажатия в переменную event
+            if event.type == pygame.QUIT: # Проверка кнопки
+                sys.exit() # Выход из окна
+
+
+
+
+
 
 
 Main()

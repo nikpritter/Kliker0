@@ -18,6 +18,12 @@ def Main():
 
     while True:  # Цикл-затычка чтобы не сворачивалось окно
         for event in pygame.event.get(): # Запись каждого нажатия в переменную event
+            if event.type == pygame.MOUSEBUTTONDOWN: # Проверка на нажатие кнопки мыши
+                if event.button == 1: # Проверка на нажатие левой кнопки мыши
+                    print(1)
+
+
+
             if event.type == pygame.QUIT: # Проверка кнопки
                 screen.fill(red) # Покраска в красный
                 pygame.display.flip()  # Обновление окна

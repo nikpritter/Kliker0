@@ -5,10 +5,10 @@ pygame.init() #Запуск библиотеки pygame
 
 
 stop = False # Переменная для цикла-затычки
-width = 0 # Ширина окна
-height = 0 # Высота окна
+width = 800 # Ширина окна
+height = 600 # Высота окна
 
-def main():
+def Main():
     screen = pygame.display.set_mode((width, height)) #Запуск экрана через библиотеку pygame
     pygame.display.set_caption("Kliker0") #Присвоение окну названия "Kliker0"
 
@@ -16,4 +16,4 @@ def main():
         a = 1
 
 
-main()
+Main()

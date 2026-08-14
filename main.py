@@ -8,5 +8,4 @@ pygame.display.set_caption("Kliker0") #Присвоение окну назва�
 while stop != True: #Цикл-затычка чтобы не сворачивалось окно
     a = 1
 
-
-
+pygame.quit()

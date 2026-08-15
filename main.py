@@ -6,19 +6,22 @@ import functions #Импорт файла с функциями
 pygame.init() #Запуск библиотеки pygame
 
 
+font = pygame.font.SysFont("Arial", 20) # Создание шрифта
+
+
 width = 800 # Ширина окна
 height = 600 # Высота окна
 
-color = (255,255,255) # Белый цвет
+white = (255,255,255) # Белый цвет
 red = (255,0,0) # Красный цвет
 
 score = 0 # Счёт игровой валюты
 
 
-def main():
+def main(): # Создание основной функции
     screen = pygame.display.set_mode((width, height)) #Запуск экрана через библиотеку pygame
     pygame.display.set_caption("Kliker0") #Присвоение окну названия "Kliker0"
-    screen.fill(color) # Заливка цвета
+    screen.fill(white) # Покраска в белый
     pygame.display.flip() # Обновление окна
 
     global score # Объявление глобальной переменной
@@ -28,6 +31,10 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN: # Проверка на нажатие кнопки мыши
                 if event.button == 1: # Проверка на нажатие левой кнопки мыши
                     score += 1 # Начисление валюты за клик
+                    screen.fill(white)  # Покраска в белый
+                    text_surface = font.render(str(score), True, red) # Рендер значения счёта в картинку
+                    screen.blit(text_surface, (20, 10)) # Вывод картинки со счётом на экран
+                    pygame.display.flip() # Обновление окна
 
 
 
@@ -39,4 +46,4 @@ def main():
                 sys.exit() # Выход из окна
 
 
-main()
+main() # Запуск основной функции

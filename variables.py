@@ -3,13 +3,20 @@ import pygame
 
 pygame.init() #Запуск библиотеки pygame
 
-
+#Параметры окна
 width = 800 # Ширина окна
 height = 600 # Высота окна
 
+#Цвета
 white = (255,255,255) # Белый цвет
 red = (255,0,0) # Красный цвет
 
+#Игровые переменные
 score = 0 # Счёт игровой валюты
 
+# Параметры текста
 font = pygame.font.SysFont("Arial", 20) # Создание шрифта
+
+# Кнопки
+button_klik = pygame.Rect((width / 2 - 100), (height / 2 - 50), 200, 50)  # x, y, ширина, высота
+button_text = font.render("Нажми меня", True, red)

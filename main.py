@@ -15,7 +15,7 @@ red = (255,0,0) # Красный цвет
 score = 0 # Счёт игровой валюты
 
 
-def Main():
+def main():
     screen = pygame.display.set_mode((width, height)) #Запуск экрана через библиотеку pygame
     pygame.display.set_caption("Kliker0") #Присвоение окну названия "Kliker0"
     screen.fill(color) # Заливка цвета
@@ -39,4 +39,4 @@ def Main():
                 sys.exit() # Выход из окна
 
 
-Main()
+main()

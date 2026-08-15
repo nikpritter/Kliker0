@@ -24,7 +24,7 @@ def main(): # Создание основной функции
             if event.type == pygame.MOUSEBUTTONDOWN: # Проверка на нажатие кнопки мыши
                 if event.button == 1:  # Проверка на нажатие левой кнопки мыши
                     if variables.button_klik.collidepoint(event.pos):  # Проверяем, попал ли клик в область кнопки
-                        variables.score += variables.score_aktiiv_in # Начисление баллов за нажатие кнопки
+                        variables.score += variables.score_aktiv_in # Начисление баллов за нажатие кнопки
 
 
 

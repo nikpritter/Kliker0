@@ -19,14 +19,15 @@ score_passiv_in = 0 # Переменная для количества начи�
 score_aktiv_in = 1 #Переменная для количества начисляемых едениц за клик
 
 # Параметры текста
-font = pygame.font.SysFont("Arial", 20) # Создание шрифта
+font20 = pygame.font.SysFont("Arial", 20) # Создание шрифта
+font17 = pygame.font.SysFont("Arial", 17) # Создание шрифта
 
 
 # Кнопки
 # Клик
 button_klik = pygame.Rect((width / 2 - 100), (height / 2 - 50), 200, 50)  # x, y, ширина, высота (создание кнопки)
-button_text = font.render("Нажми меня", True, red) # Создание текста кнопки
+button_text = font20.render("Нажми меня", True, red) # Создание текста кнопки
 #Кнопка для поднятия уровня нажатия(увеличения получемых монеток за клик)
-button_aktiv_in = pygame.Rect(40, 80, 100, 50)  # x, y, ширина, высота (создание кнопки)
-button_aktiv_in_text = font.render("+1 за клик", True, red) # Создание текста кнопки
+button_aktiv_in = pygame.Rect(60, 10, 100, 50)  # x, y, ширина, высота (создание кнопки)
+button_aktiv_in_text = font17.render("+1 за клик", True, red) # Создание текста кнопки
 #

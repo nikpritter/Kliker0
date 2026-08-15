@@ -7,13 +7,17 @@ import sys
 
 pygame.init() #Запуск библиотеки pygame
 
+def button_rendering(screen, button_variable, button_variable_text, x_magnification, y_magnification): # Создание: (переменная экрана, переменная кнопки, переменная текста кнопки, значение сдвига по х, значение сдвига по у)
+    pygame.draw.rect(screen, variables.white, button_variable)  # Заливка кнопки
+    pygame.draw.rect(screen, variables.red, button_variable, 2)  # Отрисовка границы кнопки
+    screen.blit(button_variable_text,(button_variable.x + x_magnification, button_variable.y + y_magnification))  # Добавление текста на кнопку
+
 def frame_rendering(screen):
     screen.fill(variables.white)  # Покраска в белый
-    text_surface = variables.font.render(str(variables.score), True, variables.red)  # Рендер значения счёта в картинку
+    text_surface = variables.font20.render(str(variables.score), True, variables.red)  # Рендер значения счёта в картинку
     screen.blit(text_surface, (20, 10))  # Вывод картинки со счётом на экран
-    pygame.draw.rect(screen, variables.white, variables.button_klik)  # Заливка кнопки
-    pygame.draw.rect(screen, variables.red, variables.button_klik, 2)  # Отрисовка границы кнопки
-    screen.blit(variables.button_text,(variables.button_klik.x + 40, variables.button_klik.y + 14))  # Добавление текста на кнопку
+    button_rendering(screen, variables.button_klik, variables.button_text, 40, 14)
+    button_rendering(screen, variables.button_aktiv_in, variables.button_aktiv_in_text, 7, 15)
     pygame.display.flip()  # Обновление окна
 
 def main(): # Создание основной функции

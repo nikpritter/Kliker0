@@ -1,4 +1,6 @@
 # Все переменные проекта
+
+# Импорт нужных библиотек
 import pygame
 
 pygame.init() #Запуск библиотеки pygame
@@ -18,5 +20,5 @@ score = 0 # Счёт игровой валюты
 font = pygame.font.SysFont("Arial", 20) # Создание шрифта
 
 # Кнопки
-button_klik = pygame.Rect((width / 2 - 100), (height / 2 - 50), 200, 50)  # x, y, ширина, высота
-button_text = font.render("Нажми меня", True, red)
+button_klik = pygame.Rect((width / 2 - 100), (height / 2 - 50), 200, 50)  # x, y, ширина, высота (создание кнопки)
+button_text = font.render("Нажми меня", True, red) # Создание текста кнопки

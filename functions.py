@@ -33,8 +33,9 @@ def main(): # Создание основной функции
                 if event.button == 1:  # Проверка на нажатие левой кнопки мыши
                     if variables.button_klik.collidepoint(event.pos):  # Проверяем, попал ли клик в область кнопки
                         variables.score += variables.score_aktiv_in # Начисление баллов за нажатие кнопки
-                    if variables.button_aktiv_in.collidepoint(event.pos):  # Проверяем, попал ли клик в область кнопки
+                    if variables.button_aktiv_in.collidepoint(event.pos) and variables.score >= 5:  # Проверяем, попал ли клик в область кнопки
                         variables.score_aktiv_in += 1 # Увеличение количества баллов за нажатие кнопки
+                        variables.score -= 5# Отнимаем цену улучшения
 
 
 
